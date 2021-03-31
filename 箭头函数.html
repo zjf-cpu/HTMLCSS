@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="box"  style="width: 300px;height: 300px;background-color: #0f0;">
+    </div>
+    <script>
+    //    方法1 原始
+        let box = document.getElementById("box");
+        box.addEventListener('click',function(){
+            let _this = this;
+            setTimeout(function(){
+                // this.style.background = 'red'; Cannot set property 'background' of undefined at
+            }, 2000);
+            _this.style.background = 'red';
+        })
+        // 方法2
+    //     let box =document.getElementById("box");
+    //      box.addEventListener("click",function(){
+    //        setTimeout(() => {
+    //            this.style.background = 'red';
+    //         //    箭头函数的this是静态的 他的值是声明（声明在外一层的作用域中）箭头函数下的作用域this  
+    //        }, 2000);
+    //    })
+    // </script>
+</body>
+</html>

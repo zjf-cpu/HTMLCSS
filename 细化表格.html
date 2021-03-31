@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            
+            border-collapse: collapse;
+            /* 合并边框 */
+            border: 1px solid #666;
+            margin: 50px auto;
+        }
+        td,th{
+            padding: 50px;
+            border: 1px solid #666;
+            text-align: center;
+        }
+        caption{
+            font-weight: 700;
+            margin-bottom: 50px;
+            font-size: 35px;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <caption>影视迷你列表</caption>
+        <thead>
+            <tr>
+                <th>表格1</th>
+                <th>表格2</th>
+                <th>表格3</th>
+                <th>表格4</th>
+                <th>表格5</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td colspan="2">表格1</td>
+                <td>表格2</td>
+                <td>表格3</td>
+                <td>表格4</td>
+                
+            </tr>
+            <tr>
+                <td rowspan="2">表格1</td>
+                <td>表格2</td>
+                <td>表格3</td>
+                <td>表格4</td>
+                <td>表格5</td>
+            </tr>
+            <tr>
+                <td>表格1</td>
+                <td>表格2</td>
+                <td colspan="2" rowspan="2">表格4</td>
+            </tr>
+            <tr>
+                
+                <td>表格2</td>
+                <td>表格3</td>
+                <td>表格4</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>foot表格1</td>
+                <td>foot表格1</td>
+                <td>foot表格1</td>
+                <td>foot表格1</td>     
+                <td>foot表格1</td>     
+                
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>

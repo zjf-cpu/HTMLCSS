@@ -1,0 +1,88 @@
+
+<!DOCTYPE HTML>
+<html>
+<style>
+  
+        video{  
+            position: absolute;  
+            right: 0;  
+            bottom: 0;  
+            object-fit: fill;
+            height: 100%;  
+            width: 100%;  
+            /*加滤镜*/
+            /*filter: blur(15px); //背景模糊设置 */
+            /*-webkit-filter: grayscale(100%);*/  
+            /*filter:grayscale(100%); //背景灰度设置*/  
+            z-index:-11
+        }  
+        /* source{  
+            min-width: 100%;  
+            min-height: 100%;  
+            height: auto;  
+            width: auto;  
+        }  */
+		/* p{
+		    width: 100%;
+			text-align: center;
+			font-size: 40px;
+			color: white;
+		} */
+        img {
+            margin-left: 900px;
+            margin-top: 100px;
+        }
+        h3 {
+            
+           
+            font-size: 26px;
+            color: #eee;
+            margin: 0px auto 40px 450px;
+            text-align: center;
+            font-weight: bold;
+        }
+        input {
+            border-radius: 4px;
+            margin-left: 800px;
+            background: #fff;
+            width: 400px;
+            height: 50px;
+            outline: none;
+            margin-top: 5px;
+        }
+        #btn-submit {
+            background: #3498db;
+            width: 410px;
+        }
+</style>
+<body>
+<!-- <p>大家好 </p>
+<p>大家好 </p>
+<p>大家好 </p>
+<p>大家好 </p>
+<p>大家好 </p>
+<p>大家好 </p>
+<img src="./bg.jpg"/> -->
+<div>
+    <div>
+        <img src="./imageTitle.png" alt="">
+    </div>
+    <div>
+        <h3>内蒙古自治区扫黑除恶管理应用系统</h3>
+    </div>
+    <div>
+        <input type="text" placeholder="用户名：">
+    </div>
+    <div>
+        <input type="text" placeholder="密码：">
+    </div>
+    <input type="submit" value="登录" id="btn-submit">
+    <video autoplay loop muted>
+        <source src="D:\BaiduNetdiskDownload\founder_vue-dev_shce-f60dc11730eeda479c958dc12c1a53d524dca929\src\assets\img\Login\animate.mp4" type="video/mp4"  />
+      Your browser does not support the video tag.
+      </video>
+</div>
+
+ 
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1{
+            background-color:#f00;
+            text-align: center;
+        }
+        .box2{
+            background-color:#0ff;
+            height: 200px;
+            display: inline-block;
+            font-weight: bold;
+            font-style: italic;
+            line-height: 200px;
+        }
+        .box3{
+            text-align: center;
+        }
+        [name="myname"]{
+            font-size: large;
+        }
+        [name]{
+            font-size: 100px;
+        }
+    </style>
+</head>
+<body>
+    <!-- div是块级元素 box1与box2都是占满同一行 所以默认box2已经是居中了  display:inline-block；
+    把box改为行内元素就行了-->
+    <div class="box1">
+        <div class="box2">我是box2div是块级元素 box1与box2都是占满同一行 所以默认box2已经是居中了  display:inline-block；
+            把box改为行内元素就行了div是块级元素 box1与box2都是占满同一行 </div>
+    </div>
+    <div class="box3" name="myname">哈哈哈哈</div>
+</body>
+</html>

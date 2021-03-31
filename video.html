@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        video {
+            z-index: -12;
+            /* 脱离文档流 */
+           position: absolute;
+            object-fit: fill;
+            width: 100%;
+            height: 100%;
+            right: 0;
+            bottom: 0;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div>哈哈</div>
+        <video loop="loop" autoplay="autoplay" muted>
+            <source src="D:\BaiduNetdiskDownload\founder_vue-dev_shce-f60dc11730eeda479c958dc12c1a53d524dca929\src\assets\img\Login\animate.mp4" type="video/mp4">
+                   您的浏览器不支持 video 标签。
+           </video>
+    </div>
+
+
+<script>
+
+    // var video= document.querySelector('video');
+
+    // video.playbackRate = 2;
+
+</script>
+</body>
+</html>

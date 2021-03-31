@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <base href="http://www.baidu.com" target="_self">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <a href="/s?wd=vue">百度一下</a>
+    <a href="" target="_blank">百度一下</a>
+    <a href="" target="_blank">百度一下</a>
+    <a href="" target="_blank">百度一下</a>
+    <a href="" target="_self">百度一下</a>
+    <!-- tagert 默认值为 _self
+                另打开一个 _blank
+                三个值配个iframe使用 _parent _top 具体的name
+                         -->
+    <iframe src="" frameborder="0"></iframe>
+    <a href="#title2" target="_self">跳到标题二</a>
+    <!-- 锚点  mao dian-->
+    <br>
+    <br>
+    <h2 id="title2">标题二</h2>
+    <a href="javascript:alert('hello)'">alert</a>
+    <!-- a元素的伪链接 点击a标签时不跳转 为了执行js代码 
+    javascript:后面写js代码-->
+    <a href="#">跳到顶部</a>
+    <!-- href 不一定是跳转页面还可以下载东西 .zip -->
+</body>
+</html>

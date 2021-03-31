@@ -1,0 +1,133 @@
+使用xmind工具构思图
+p标签不能带div标签
+在css文件中设置字符编码 @charset "utf-8";
+html引用css文件两种方法 
+                1：在head标签里用 link标签
+                2：在style标签里用@import url("");
+css因为会层叠掉样式所以叫层叠样式表 也是众多生存下去的原因
+选择器有：
+    1：并集选择器 a,p{}
+    2: 类选择器
+    3：id选择器     用id划分网页 id=navig header content footer
+    4：通用选择器 *  一般用于取消浏览器user agent stylesheet 默认的样式（内外边距）
+    5：标签选择器 div{}
+    6：伪类选择器     伪类跟的都是冒号:
+                    目标选择器 一般用于a标签的锚点上 当点击a时会动态改变css样式  :target{color:red} 
+                    state状态选择器  用于按钮不可用时  :disable{color:red}  :enable{} :checked{}
+                    dynamic pseudo-classes 动态选择器  以a标签为例 input:focus
+                            a:link {} a:visited{} a:hover{} a:active{}  固定顺序不能乱
+                            ：hover必须在link visited的后面 active必须在hover的后面才生效
+                            a{}给所有动态伪类都设置了
+                    结构选择器  :nth-child(3){}  对所有元素的第三个子元素有效
+                                p:nth-child(3){}  子元素必须是p元素并且只对第三个p子元素有效
+                                p :nth-child(3){}  注意空格
+                                p:nth-last-child(3){}   倒数第三个子元素有效
+                                p:nth-of-type(3){}      只针第三个子元素p有效 中间有其他类型子元素不会计算  
+    7：伪元素选     ::before  ::after 用来在一个元素内容的前面或者后面添加内容 伪元素是行内元素不能width
+    8：属性选择器   [属性名|="one"]代表属性值等于one或者以one开头且后面紧跟着连字符-的元素  
+                     [属性名^="one"]以one开头
+    9: 后代选择器 #header .title{} 
+    10：子代选择器  div > p {}直接子代选择器
+    11：交集选择器  div .one[title=""]{}
+    12: 并集选择器   div,.ont,[title=""]{} 
+在标签内写的是标签属性 在css中写的是标签样式
+css属性
+    color 准确说是前景色
+    width 对于span行内元素无效  宽度和高度不适用于非替代行内元素
+浏览器调试工具 在浏览器中选style然后点+号
+rgb 0-255一个字节   rgb(0,0,0)黑色= transparent   rgb(255,255,255)白色
+rgb写成16进制  background-color: #ffffff; 开发基本用他
+rgba a是alpha透明图0-1 rgba（
+css文本属性 text-decoration  letter-spaceing(字母间距)   word-spaceing(单词间距) 
+            text-transform 用于设置文字的大小写转换 值:capitalize uppercase lowercase none
+            text-indent 首字母缩进 一个文字大小默认16px 当值为32px时表示缩进2个文字 
+                em是相对当前元素的文字大小而言的 当一个文字大小为20px时 2em=20X2px
+                rem 是rootem 是相对HTML文字大小而言的
+            text-align 用于设置元素内容（不是元素文本,包括里面标签的内容）在元素中的水平对齐方式
+            <style>
+            .box1{
+                background-color:#f00;
+                text-align: center;
+                # text-align:justify 左右两边对齐 最后一行没效果
+                
+            }
+            .box2{
+                background-color:#0ff;
+                width: 1000;
+                display:inline-block；
+        
+               
+            }
+        </style>
+    </head>
+    <body>
+        <!-- div是块级元素 box1与box2都是占满同一行 所以默认box2已经是居中了  display:inline-block；
+        把box改为行内元素就行了-->
+        <div class="box1">
+            <div class="box2">我是box2</div>
+        </div>
+css字体属性
+            font-size
+            font-family 设置字体风格 值的范围在本地系统c/window/fonts文件夹内  中英文都支持
+                        为了防止设置的值不在本系统 所以一般赋多个值
+            font-weight 为字体加粗
+            font-style  设置斜体 前提是font-family支持的斜体
+            line-height  用于设置文本的最小行高 一行文字（不是文本高度)所占的高称为行高
+                        行高的定义：两行文字基线之间的间距
+                                  一行文字从上到下有四根线top middle baseline bottom
+                                  一般基线对应X字母下面
+                        行距的定义：底线跟顶线之间的距离
+                        所以行高的元素宽高文字就居中了
+emment语法 有HTML。css语法    $表示数字   w100+h100 是宽度高度都是100px fz20 lh100
+css属性继承的是计算值（px) 不是当初编写属性时的字面值em
+css允许多个相同名字的css属性层叠在一个元素上 层叠后只有一个有效 按优先级
+!important 内联样式 id (class 伪类 属性选择器)  （元素 伪元素) 通配符
+ol li   ul li    dl dt(自定义term) dd（描述）dt与dd是dl的直接子元素  
+列表属性 list-style-type list-style-image list-style-position list-style 都是针对li的顺序样式
+表格table tr row td description
+替换元素  image从服务器请求href然后返回一张图片替换img标签    大部分都是行内替换元素    input也是
+fieldset 田野 legend说明田野
+input标签的reset要生效两个前提：1.type必须是reset（value可以不写) 2.所有内容都必须在form表单中
+表单中的name属性对应url中query的key值  并且有写name属性的标签才会提交数据
+属性名与属性值相同可以省略属性值   
+button标签type等于reset（默认也是submit 一般提交后都会重置）时跟input标签的type等于reset效果一样   submit类似
+label标签中for属性的值等于要与关联的input标签中的id值一致
+xhr xmlhttprequest xhr为向服务器发送请求和解析服务器响应提供了接口，可以以异步方式从服务器获取新数据
+ajax有很多版本 jquery.js vue.js  两个都不同使用原生态开发  局部网页刷新数据 不用重新刷新整个网页
+块级元素独占父元素一行 行内元素基线对齐
+根据元素的内容（是否浏览器会替换元素）类型，HTML元素分为两类 替换元素（一般是单标签）   非替换元素
+行内非替换元素不能设置宽高  可以通过display="inline-block"改变高宽度
+隐藏元素方法：1.display:none  清除了边款不占据空间
+             2.visibility：hidden   没清除边款还占据空间  默认值为visible
+overflow内容溢出行为  值有visible 完全溢出显示完整
+                         hidden  超出溢出部分不可看
+                         scroll  设置滚动条
+                         auto    自动根据是否溢出来决定是否设置滚动条
+一般清除空格使用float css属性 基线对齐效果消失
+元素之间的嵌套  一般情况下块级元素和块行元素可以嵌套任何元素  特殊：p标签不能嵌套div标签
+                行内元素不能嵌套块级元素
+盒子模型 盒子默认width height 都是auto
+content  min-width：300px  当浏览器宽度小于300px时会出现滚动条       min-height类似
+margin 上右下左
+
+outline:模仿测试时可以给div添加outline属性 添加border属性不行，因为可能因为占据了空间导致overflow：hidden
+        跟border用法很像，但outline不占据空间，默认显示在border的外面
+        用于去除a和input标签focus时的轮廓效果
+
+ 脱离文档流，也就是将元素从普通的布局排版中拿走，其他盒子在定位的时候，会当做脱离文档流的元素不存在而进行定位。
+ 需要注意的是，使用float脱离文档流时，其他盒子会无视这个元素，但其他盒子内的文本依然会为这个元素让出位置，环绕在周围。
+ 而对于使用absolute positioning脱离文档流的元素，其他盒子与其他盒子内的文本都会无视它。
+
+ object-fit CSS 属性指定可替换元素的内容应该如何适应到其使用的高度和宽度确定的框。
+您可以通过使用 object-position 属性来切换被替换元素的内容对象在元素框内的对齐方式。
+object-fit:fill充满
+
+video添加muted属性autoplay才生效
+DIV CSS left right top bottom定位 这四个CSS属性样式用于定位对象盒子，必须定义position属性值为absolute或者relative。
+Left 当前元素的左侧与父元素左侧(就是原来默认位置)的距离值。
+
+Right 当前元素的右侧与父元素右侧的距离值。
+
+Top 当前对象顶部距离原位置顶部距离多少。
+
+Bottom 当前对象底部距离原位置距离多少。

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="https://www.baidu.com/s?" target="_blank" 
+        enctype="multipart/form-data" method="POST">
+        <!-- target提交时是否打开新页面 -->
+        <!-- 规定了在向服务器发送表单数据之前如何对数据进行编码 文件上传时值必须为multipart/form-data
+        并且method必须为post -->
+        <fieldset>
+            <legend>喜好</legend>
+            <label for="apple">苹果</label>
+            <input type="checkbox" name="hobby" id="apple">
+            <label for="banana">香蕉</label>
+            <input type="checkbox" name="hobby" id="banana">
+            <select name="" id="">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+            </select>
+            <textarea name="" id="" cols="30" rows="10" style="resize: none;"></textarea>
+            <div>
+                <label for="file">选择文件</label>
+                <input type="file" name="file" id="file">
+            </div>
+            <input type="submit" value="提交">
+        </fieldset>
+        
+    </form>
+</body>
+</html>
